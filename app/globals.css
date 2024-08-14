@@ -79,5 +79,5 @@ body,
 }
 
 .custom-navbar {
-  @apply hidden lg:flex lg:flex-1 lg:bg-yellow-400;
+  @apply hidden lg:flex lg:flex-1;
 }
