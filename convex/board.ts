@@ -2,16 +2,16 @@ import { v } from "convex/values";
 import { mutation } from "./_generated/server";
 
 const images = [
-  "./placeholder/1.png",
-  "./placeholder/2.png",
-  "./placeholder/3.png",
-  "./placeholder/4.png",
-  "./placeholder/5.png",
-  "./placeholder/6.png",
-  "./placeholder/7.png",
-  "./placeholder/8.png",
-  "./placeholder/9.png",
-  "./placeholder/10.png",
+  "/placeholder/1.png",
+  "/placeholder/2.png",
+  "/placeholder/3.png",
+  "/placeholder/4.png",
+  "/placeholder/5.png",
+  "/placeholder/6.png",
+  "/placeholder/7.png",
+  "/placeholder/8.png",
+  "/placeholder/9.png",
+  "/placeholder/10.png",
 ];
 
 export const create = mutation({
@@ -27,6 +27,8 @@ export const create = mutation({
     }
 
     const randomImages = images[Math.floor(Math.random() * images.length)];
+
+    console.log(randomImages, "=");
 
     const board = await ctx.db.insert("boards", {
       title: args.title,
