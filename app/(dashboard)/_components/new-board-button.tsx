@@ -1,6 +1,7 @@
 "use clinet";
 
 import { api } from "@/convex/_generated/api";
+import { useRouter } from "next/navigation";
 import { useApiMutation } from "@/hooks/use-api-mutation";
 
 import { cn } from "@/lib/utils";
@@ -15,6 +16,8 @@ interface NewBoardButtonProps {
 const NewBoardButton = ({ orgId, disabled }: NewBoardButtonProps) => {
   const { mutate, pending } = useApiMutation(api.board.create);
 
+  const router = useRouter();
+
   const onClick = () => {
     mutate({
       orgId,
@@ -22,7 +25,7 @@ const NewBoardButton = ({ orgId, disabled }: NewBoardButtonProps) => {
     })
       .then((id) => {
         toast.success("Board created");
-        //! ToDo
+        router.push(`/board/${id}`);
       })
       .catch(() => toast.error("Failed to create Board"));
   };
