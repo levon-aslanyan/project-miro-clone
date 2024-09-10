@@ -68,7 +68,7 @@ const Info = ({ boardId }: InfoProps) => {
       <Actions id={data._id} title={data.title} side="bottom" sideOffset={10}>
         <div>
           <Hint lable="Main menu" side="bottom" sideOffset={10}>
-            <Button variant="board" size="icon">
+            <Button variant="board" size="icon" className="flex items-center">
               <Menu />
             </Button>
           </Hint>
