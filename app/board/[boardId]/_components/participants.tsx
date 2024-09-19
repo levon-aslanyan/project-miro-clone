@@ -10,7 +10,7 @@ const Participants = () => {
   const users = useOthers();
 
   const currentUser = useSelf();
-  console.log(currentUser, "---");
+  // console.log(currentUser, "---");
 
   const hasMoreUser = users.length > MAX_SHOW_USERS;
   return (
