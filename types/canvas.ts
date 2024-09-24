@@ -1,3 +1,5 @@
+import { Eclipse } from "lucide-react";
+
 export type Color = {
   r: number;
   g: number;
@@ -130,3 +132,11 @@ export enum CanvasMode {
   Resizing,
   Pencil,
 }
+
+export type Layer =
+  | RectangleLayer
+  | EllipseLayer
+  | PathLayer
+  | NoteLayer
+  | TextLayer
+  | NoteLayer;
